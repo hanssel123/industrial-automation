@@ -5,7 +5,7 @@ app = Flask(__name__)
 @app.route('/upload', methods=['POST'])
 def upload_file():
     data = request.data.decode("utf-8")
-    with open('/home/hanssel/Documents/Automatica_3/Proyecto_1_esp_python_csv/server/data.csv', 'a') as f:
+    with open('C:/Users/hanssel/Documents/repos_final/industrial4/industrial-automation/iot-projects/project-1-esp32-connection-flask-csv/server/data.csv', 'a') as f:
         f.write(data + '/n')
 
     return 'Datos recibidos', 200
